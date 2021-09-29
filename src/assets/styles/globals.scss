@@ -1,0 +1,193 @@
+@import './theme';
+
+.video-aula {
+    margin-top: 120px;
+    padding: 30px 30px;
+
+    h2{
+        padding: 5px 10px;
+        font-weight: bold;
+        text-align: center;
+        color: var(--primary-color);
+      }
+
+  }
+
+.login {
+    padding: 30px 30px;
+    justify-content: center;
+
+    h2{
+        padding: 5px 10px;
+        font-weight: bold;
+        text-align: center;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        }
+}
+
+  /* Hero */
+#hero ul {
+    padding-left: 10px
+    
+}
+
+@media screen and (max-width: 767px){
+    main section:first-child,
+    #hero{
+      padding-top: 70px !important;
+    }
+    
+}
+
+
+main section:not(.full){
+    padding: 20px
+  }
+  main section .container,
+  footer {
+    min-height: 50vh;
+  }
+  
+  
+  #vantagens > .container {
+    border: 4px solid var(--primary-color);
+    border-radius: 12px;
+  }
+  
+  #vantagens > .container  i {
+    padding: 12px;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    margin-bottom: 10px
+  }
+  #vantagens > .container  i:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transition: .4s;
+    cursor: pointer
+  }
+  
+  #vantagens > .container > div {
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    margin: 0 20px
+  }
+  
+  #formacao #video-home,
+  #formacao #video-home:hover {
+    transition: .4s
+  }
+  
+  #formacao #video-home {
+    height: 300px;
+    width: auto;
+    cursor: pointer;
+  }
+  #formacao #video-home:hover {
+    filter: brightness(50%);
+  }
+  
+  #formacao h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  #formacao ul {
+    padding: 10px;
+    padding-left: 40px
+  }
+  #formacao ul li {
+    margin: 20px 0;
+    font-size: 1.3rem
+  }
+  
+  
+  footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        
+        small {
+        color: white;
+        font-size: 1.4rem
+        }
+    
+    }
+  
+  
+  .fumaca {
+    font-size: 1.1rem;
+    color: gray;
+    
+    &:last-child {
+        color: lightgray;
+        font-size: 1.6rem;
+        animation-delay: .5s;
+        animation: 1.5s piscar infinite;
+    }
+  }
+
+  
+  
+  .foguete-container {
+    animation: 4s andar infinite linear;
+  }
+  
+  .foguete {
+    height: 100px;
+    width: auto;
+
+    &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: red;
+        top: 110%;
+      }
+  }
+  
+  @keyframes piscar {
+    from {
+      opacity: .5;
+    }
+    to {
+      opacity: .9;
+    }
+  }
+  
+  
+  @keyframes andar {
+    0% {
+      transform: translateY(0px)
+    }
+    20% {
+      transform: translateY(-50px)
+    }
+    30% {
+      transform: translateY(-50px) rotate(-90deg) 
+    }
+    40% {
+      transform: translateY(-50px) translateX(-300px) rotate(-90deg)  
+    }
+    50% {
+      transform: translateY(-50px) translateX(-300px) rotate(120deg)
+    }
+    60% {
+      transform: translateY(-50px) translateX(300px) rotate(90deg)
+    }
+    70% {
+      transform: translateY(-50px) translateX(300px) rotate(-90deg)
+    }
+    80% {
+      transform: translateY(-50px) translateX(0px) rotate(0)
+    }
+    100% {
+      transform: translateY(0px)
+    }
+  
+  
+  }

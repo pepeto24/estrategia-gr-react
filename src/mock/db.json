@@ -1,0 +1,11 @@
+{
+
+    "alunos": [
+        {"login": "elton", "senha": "1234"},
+        {"login": "andrea", "senha": "1234"},
+        {"login": "henrique", "senha": "1234"}
+    ]
+
+
+
+}
