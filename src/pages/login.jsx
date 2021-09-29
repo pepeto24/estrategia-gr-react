@@ -1,4 +1,11 @@
+import { Link, useHistory } from "react-router-dom"
+import AuthService from "../core/services/auth.service"
+
 function Login  (props){
+    const history = useHistory();
+    if(AuthService.isAuthenticated() == true){
+        history.push('/lista-aulas');
+    }
     return (
     <>
 
@@ -11,7 +18,7 @@ function Login  (props){
         
         <input className="form-control mb-3" type="text" placeholder="Digite sua senha"/>
             
-        <button className="btn btn-primary fs-3 botao text-center u-none"  data-bs-toggle="modal" data-bs-target="#modalLogin">Login</button>
+        <Link to="/lista-aulas" className="btn btn-primary fs-3 botao text-center u-none" >Login</Link>
         </section>
     </main>
 

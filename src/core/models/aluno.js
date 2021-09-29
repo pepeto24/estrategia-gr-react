@@ -1,9 +1,9 @@
-class Aluno{
+import User from "./user";
+
+class Aluno extends User{
 
     id;
     nome;
-    email;
-    senha;
     cpf;
 
 }
